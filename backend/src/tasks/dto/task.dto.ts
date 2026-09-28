@@ -1,0 +1,1 @@
+import { TaskPriority,TaskStatus } from '@prisma/client';import { IsDateString,IsEnum,IsString,MinLength } from 'class-validator';export class TaskDto{@IsString()@MinLength(3)title!:string;@IsEnum(TaskStatus)status!:TaskStatus;@IsEnum(TaskPriority)priority!:TaskPriority;@IsDateString()dueDate!:string;@IsString()projectId!:string;@IsString()assigneeId!:string;}
