@@ -14,6 +14,14 @@ Demo login: `admin@opsboard.dev` / `OpsBoard123!`
 
 OpsBoard centralizes projects, tasks, ownership and operational visibility in a responsive SaaS-style workspace. The repository intentionally goes beyond UI implementation: it includes reactive state architecture, a REST API, relational persistence, JWT/RBAC security, automated tests, containerization and CI quality gates.
 
+### Recruiter quick tour
+
+1. Sign in with the demo account above.
+2. Review operational metrics and workload on the dashboard.
+3. Open **Projects** to inspect ownership, progress, filtering and pagination.
+4. Open **Tasks** to inspect priorities, assignees and workflow status.
+5. The API enforces JWT authentication, RBAC and resource-level authorization server-side.
+
 ## What this project demonstrates
 
 - **Angular architecture:** standalone components, lazy routes, Signals, computed state, RxJS and Reactive Forms.
@@ -174,7 +182,7 @@ The container setup separates build and runtime stages. Angular is served by Ngi
 - Audit log and comments
 - E2E browser tests
 - Observability and structured logging
-- Cloud deployment with managed PostgreSQL
+- E2E browser coverage for the public demo\n- Structured logging and production observability
 
 ## Author
 
