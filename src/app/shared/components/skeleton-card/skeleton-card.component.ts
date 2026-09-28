@@ -1,0 +1,3 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+@Component({selector:'app-skeleton-card',standalone:true,template:'<div class="line short"></div><div class="line value"></div><div class="line"></div>',styles:[':host{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.35rem}.line{height:.65rem;background:#eef0f4;border-radius:1rem;margin-top:.7rem;animation:pulse 1.2s ease-in-out infinite}.short{width:45%;margin-top:0}.value{height:1.8rem;width:30%}@keyframes pulse{50%{opacity:.45}}'],changeDetection:ChangeDetectionStrategy.OnPush})
+export class SkeletonCardComponent {}
