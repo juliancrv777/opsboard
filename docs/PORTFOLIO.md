@@ -5,7 +5,7 @@
 **OpsBoard — Full-stack Operations Management Platform**  
 Angular, TypeScript, Signals, RxJS, NestJS, PostgreSQL, Prisma, JWT, Docker, GitHub Actions
 
-Built a full-stack operations platform with reactive Angular state architecture, REST APIs, PostgreSQL persistence, JWT authentication, role/resource authorization, automated tests and containerized CI workflows.
+Built a full-stack operations platform with reactive Angular state architecture, REST APIs, PostgreSQL persistence, JWT authentication, role/resource authorization, automated tests and containerized CI workflows and a public Railway deployment.
 
 ## CV — achievement bullets
 
@@ -13,7 +13,7 @@ Built a full-stack operations platform with reactive Angular state architecture,
 - Built a modular NestJS REST API backed by Prisma/PostgreSQL with DTO validation and relational domain modeling.
 - Implemented JWT authentication plus ADMIN/MANAGER/MEMBER RBAC and resource-level ownership policies.
 - Added automated frontend/backend tests and GitHub Actions quality gates for tests, builds and Docker images.
-- Containerized the web/API/database stack with multi-stage builds, Nginx and service health checks.
+- Containerized the web/API/database stack with multi-stage builds, Nginx and service health checks.\n- Shipped a responsive public demo on Railway and validated persisted User → Project → Task workflows on mobile.
 
 ## Interview talking points
 
@@ -26,4 +26,4 @@ Built a full-stack operations platform with reactive Angular state architecture,
 
 ## LinkedIn project description
 
-OpsBoard is a full-stack operations management platform I built to exercise production-oriented TypeScript architecture end to end. The frontend uses Angular standalone components, Signals, RxJS and Reactive Forms; the API uses NestJS with Prisma/PostgreSQL. I implemented JWT authentication, RBAC and resource-level authorization, automated frontend/backend tests, GitHub Actions quality gates, and a Dockerized Angular/Nginx + NestJS + PostgreSQL stack.
+OpsBoard is a full-stack operations management platform I built to exercise production-oriented TypeScript architecture end to end. The frontend uses Angular standalone components, Signals, RxJS and Reactive Forms; the API uses NestJS with Prisma/PostgreSQL. I implemented JWT authentication, RBAC and resource-level authorization, automated frontend/backend tests, GitHub Actions quality gates, and a Dockerized Angular/Nginx + NestJS + PostgreSQL stack, deployed as a public Railway demo with responsive desktop/mobile workflows.
