@@ -20,7 +20,7 @@ OpsBoard centralizes projects, tasks, ownership and operational visibility in a 
 2. Review operational metrics and workload on the dashboard.
 3. Open **Projects** to inspect ownership, progress, filtering and pagination.
 4. Open **Tasks** to inspect priorities, assignees and workflow status.
-5. The API enforces JWT authentication, RBAC and resource-level authorization server-side.
+5. Open **Team** to inspect workspace members and roles.\n6. Create a project and task to exercise the persisted end-to-end workflow.\n7. The API enforces JWT authentication, RBAC and resource-level authorization server-side.
 
 ## What this project demonstrates
 
@@ -71,8 +71,8 @@ This boundary means the UI does not know whether data comes from an in-memory ad
 | Authorization | ADMIN / MANAGER / MEMBER, role guards, project ownership and task assignment policies |
 | Dashboard | Reactive metrics, workload visualization, activity feed, loading/error/empty states |
 | Projects | CRUD boundary, search, status filters, pagination, progress, owners and due dates |
-| Tasks | CRUD boundary, search, status/priority filters, assignees and project association |
-| API | DTO validation, modular NestJS services/controllers, REST resources, health endpoint |
+| Tasks | CRUD boundary, search, status/priority filters, assignees, project association and mobile card layout |
+| Team | Authenticated workspace member directory with ADMIN / MANAGER / MEMBER roles |\n| API | DTO validation, modular NestJS services/controllers, REST resources, health endpoint |
 | Database | PostgreSQL, Prisma relations/enums/indexes, seed data |
 | Delivery | Docker Compose, multi-stage images, Nginx, CI tests/builds and image validation |
 
@@ -150,7 +150,7 @@ Pull requests run frontend tests/build, backend Prisma generation/tests/build an
 ```text
 src/app/
 ├── core/            # authentication, API and cross-cutting concerns
-├── features/        # dashboard, projects, tasks and auth
+├── features/        # dashboard, projects, tasks, team and auth
 ├── layout/          # authenticated application shell
 └── shared/          # reusable UI primitives
 
@@ -159,7 +159,7 @@ backend/
 └── src/
     ├── auth/        # JWT, guards, roles and authorization policies
     ├── projects/    # project REST domain
-    ├── tasks/       # task REST domain
+    ├── tasks/       # task REST domain\n    ├── users/       # authenticated workspace member directory
     ├── health/      # database-aware health check
     └── prisma/      # database client
 
@@ -186,6 +186,6 @@ The container setup separates build and runtime stages. Angular is served by Ngi
 
 ## Author
 
-Built by **Julian** as a portfolio project focused on Software Engineering / Frontend Engineering roles and production-oriented TypeScript development.
+Built by **Julian Carvalho** as a portfolio project focused on Software Engineering / Frontend Engineering roles and production-oriented TypeScript development.
 
 MIT licensed.
