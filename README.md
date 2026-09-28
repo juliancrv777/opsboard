@@ -81,3 +81,17 @@ npm start
 The Angular application runs at `http://localhost:4200` and consumes the NestJS API at `http://localhost:3000/api`.
 
 Demo account: `admin@opsboard.dev` / `OpsBoard123!`.
+
+
+## Run the full stack with Docker
+
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+- Web: `http://localhost:8080`
+- API health: `http://localhost:3000/api/health`
+- Web health: `http://localhost:8080/health`
+
+See `docs/DEPLOYMENT.md` for production configuration and secret-management guidance.
