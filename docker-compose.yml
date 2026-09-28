@@ -3,10 +3,8 @@ services:
     image: postgres:17-alpine
     environment:
       POSTGRES_USER: opsboard
-      POSTGRES_PASSWORD: opsboard
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-opsboard}
       POSTGRES_DB: opsboard
-    ports:
-      - "5432:5432"
     volumes:
       - opsboard_postgres:/var/lib/postgresql/data
     healthcheck:
@@ -14,5 +12,27 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql://opsboard:${POSTGRES_PASSWORD:-opsboard}@postgres:5432/opsboard?schema=public
+      JWT_SECRET: ${JWT_SECRET:-development-only-change-me}
+      FRONTEND_URL: http://localhost:8080
+      PORT: 3000
+    ports: ["3000:3000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  web:
+    build: .
+    ports: ["8080:80"]
+    depends_on:
+      api:
+        condition: service_healthy
 volumes:
   opsboard_postgres:
