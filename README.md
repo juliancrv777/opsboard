@@ -53,3 +53,31 @@ src/app/
 ## Author
 
 **Julian** — Software Engineer / Frontend Engineer
+
+
+## Full-stack local development
+
+### Database
+```bash
+docker compose up -d postgres
+```
+
+### API
+```bash
+cd backend
+cp .env.example .env
+npm install
+npx prisma migrate dev --name init
+npm run prisma:seed
+npm run start:dev
+```
+
+### Frontend
+```bash
+npm install
+npm start
+```
+
+The Angular application runs at `http://localhost:4200` and consumes the NestJS API at `http://localhost:3000/api`.
+
+Demo account: `admin@opsboard.dev` / `OpsBoard123!`.
