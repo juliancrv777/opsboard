@@ -1,16 +1,1 @@
-<div class="shell">
-  <aside class="sidebar" [class.sidebar--open]="mobileNavOpen()">
-    <div class="brand"><span class="brand__mark">O</span><span>OpsBoard</span></div>
-    <nav aria-label="Primary navigation">
-      @for (item of navItems; track item.route) {
-        <a [routerLink]="item.route" routerLinkActive="active" (click)="closeNavigation()"><span aria-hidden="true">{{ item.icon }}</span>{{ item.label }}</a>
-      }
-    </nav>
-    <div class="workspace"><span class="avatar">JS</span><div><strong>Julian</strong><small>Workspace admin</small></div></div>
-  </aside>
-  @if (mobileNavOpen()) { <button class="backdrop" aria-label="Close navigation" (click)="closeNavigation()"></button> }
-  <div class="content">
-    <header class="topbar"><button class="menu" type="button" aria-label="Open navigation" (click)="toggleNavigation()">☰</button><div class="topbar__actions"><button type="button" class="icon-button" aria-label="Notifications">◌</button><span class="status"><i></i> System operational</span></div></header>
-    <router-outlet />
-  </div>
-</div>
+<div class="shell"><aside class="sidebar" [class.sidebar--open]="mobileNavOpen()"><div class="brand"><span class="brand__mark">O</span><span>OpsBoard</span></div><nav aria-label="Primary navigation">@for(item of navItems;track item.route){<a [routerLink]="item.route" routerLinkActive="active" (click)="closeNavigation()"><span aria-hidden="true">{{ item.icon }}</span>{{ item.label }}</a>}</nav><div class="workspace"><span class="avatar">{{ auth.user()?.name?.slice(0,2)?.toUpperCase() }}</span><div><strong>{{ auth.user()?.name }}</strong><small>{{ auth.user()?.role }}</small></div><button class="logout" type="button" aria-label="Sign out" (click)="logout()">↪</button></div></aside>@if(mobileNavOpen()){<button class="backdrop" aria-label="Close navigation" (click)="closeNavigation()"></button>}<div class="content"><header class="topbar"><button class="menu" type="button" aria-label="Open navigation" (click)="toggleNavigation()">☰</button><div class="topbar__actions"><button type="button" class="icon-button" aria-label="Notifications">◌</button><span class="status"><i></i> System operational</span></div></header><router-outlet /></div></div>
