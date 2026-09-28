@@ -5,6 +5,13 @@
 [![CI](https://github.com/juliancrv777/opsboard/actions/workflows/ci.yml/badge.svg)](https://github.com/juliancrv777/opsboard/actions/workflows/ci.yml)
 [![Container Images](https://github.com/juliancrv777/opsboard/actions/workflows/docker.yml/badge.svg)](https://github.com/juliancrv777/opsboard/actions/workflows/docker.yml)
 
+## Live demo
+
+**Application:** https://web-production-29b16.up.railway.app  
+**API health:** https://api-production-80a2.up.railway.app/api/health
+
+Demo login: `admin@opsboard.dev` / `OpsBoard123!`
+
 OpsBoard centralizes projects, tasks, ownership and operational visibility in a responsive SaaS-style workspace. The repository intentionally goes beyond UI implementation: it includes reactive state architecture, a REST API, relational persistence, JWT/RBAC security, automated tests, containerization and CI quality gates.
 
 ## What this project demonstrates
