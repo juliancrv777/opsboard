@@ -1,0 +1,1 @@
+export type TaskStatus='TODO'|'IN_PROGRESS'|'REVIEW'|'DONE';export type TaskPriority='LOW'|'MEDIUM'|'HIGH'|'URGENT';export interface Task{id:string;title:string;project:string;assignee:string;status:TaskStatus;priority:TaskPriority;dueDate:string;}export type TaskDraft=Omit<Task,'id'>;
