@@ -1,3 +1,1 @@
-export type ProjectStatus='PLANNING'|'ACTIVE'|'ON_HOLD'|'COMPLETED';
-export interface Project { id:string; name:string; description:string; status:ProjectStatus; owner:string; dueDate:string; progress:number; taskCount:number; }
-export type ProjectDraft=Pick<Project,'name'|'description'|'status'|'owner'|'dueDate'>;
+export type ProjectStatus='PLANNING'|'ACTIVE'|'ON_HOLD'|'COMPLETED';export interface Project{id:string;name:string;description:string;status:ProjectStatus;owner:string;ownerId:string;dueDate:string;progress:number;taskCount:number}export interface ProjectDraft{name:string;description:string;status:ProjectStatus;ownerId:string;dueDate:string}
