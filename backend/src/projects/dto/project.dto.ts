@@ -1,0 +1,1 @@
+import { IsDateString,IsEnum,IsString,MinLength } from 'class-validator';import { ProjectStatus } from '@prisma/client';export class ProjectDto{@IsString()@MinLength(3)name!:string;@IsString()@MinLength(10)description!:string;@IsEnum(ProjectStatus)status!:ProjectStatus;@IsString()ownerId!:string;@IsDateString()dueDate!:string;}
